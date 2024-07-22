@@ -1,6 +1,6 @@
 import { RegisterPage } from "../pages/registerPage";
 
-describe("template spec", () => {
+describe("Registration flow", () => {
   it("Register users from csv", () => {
     //jsonData is the sheet
     cy.parseXlsx("cypress/fixtures/registerQA.xlsx").then((jsonData) => {
