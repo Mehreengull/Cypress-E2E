@@ -25,6 +25,7 @@ describe("template spec", () => {
       register.isSubscribed(user.subscribe);
       register.checkPolicy();
       register.clickContinue();
+      register.logOut();
     });
   });
 });

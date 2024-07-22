@@ -11,7 +11,8 @@
   "devDependencies": {
     "cypress": "^13.13.1",
     "neat-csv": "^5.2.0",
-    "node-polyfill-webpack-plugin": "^4.0.0"
+    "node-polyfill-webpack-plugin": "^4.0.0",
+    "node-xlsx": "^0.24.0"
   },
   "dependencies": {
     "csv-parser": "^3.0.0",

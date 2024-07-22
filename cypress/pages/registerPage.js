@@ -47,4 +47,16 @@ export class RegisterPage {
   clickContinue() {
     cy.get(this.webLocators.continue).click();
   }
+  verifyAccountCreation() {
+    cy.get("div[id='content'] h1")
+      .should("be.visible")
+      .and("contain", "Your Account Has Been Created!");
+  }
+  logOut() {
+    cy.get(".dropdown > .dropdown-toggle > .fa").click();
+    cy.contains("Logout").click();
+    cy.get("div[id='content'] h1")
+      .should("be.visible")
+      .and("contain", "Account Logout");
+  }
 }
