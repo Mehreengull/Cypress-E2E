@@ -1,0 +1,21 @@
+{
+  "name": "cypress-e2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.13.1",
+    "neat-csv": "^5.2.0",
+    "node-polyfill-webpack-plugin": "^4.0.0"
+  },
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "fast-csv": "^5.0.1",
+    "fs": "^0.0.1-security"
+  }
+}
