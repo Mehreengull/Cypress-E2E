@@ -1,7 +1,7 @@
 import { RegisterPage } from "../pages/registerPage";
 
-describe("Registration flow", () => {
-  it("Register users from csv", () => {
+describe("Registration flow with excel file", () => {
+  it("Register users from excel file xlsx", () => {
     //jsonData is the sheet
     cy.parseXlsx("cypress/fixtures/registerQA.xlsx").then((jsonData) => {
       //rowLength is the number of rows in sheet 1

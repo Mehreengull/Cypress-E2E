@@ -3,7 +3,7 @@ const neatCSV = require("neat-csv");
 
 let table;
 
-describe("template spec", () => {
+describe("Register users using neat csv", () => {
   before(() => {
     cy.fixture("register.csv")
       .then(neatCSV) // Convert CSV file into an object
