@@ -7,9 +7,7 @@ const csv = require("fast-csv");
 const { writeToPath } = require("fast-csv");
 module.exports = defineConfig({
   reporter: "cypress-mochawesome-reporter",
-  reporterOptions: {
-    screenshotOnRunFailure: true,
-  },
+
   e2e: {
     baseUrl:
       "https://naveenautomationlabs.com/opencart/index.php?route=account",
