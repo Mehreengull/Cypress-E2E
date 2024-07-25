@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: "14"
 
       - name: Install dependencies
         run: npm install
@@ -28,14 +28,11 @@ jobs:
         env:
           CI: true
 
-      - name: Wait for server
-        run: npx wait-on https://naveenautomationlabs.com/opencart/index.php?route=account
-
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
           start: npm start
-          wait-on: 'https://naveenautomationlabs.com/opencart/index.php?route=account'
+          wait-on: "https://naveenautomationlabs.com"
           record: true
           parallel: true
         env:
