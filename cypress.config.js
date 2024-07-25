@@ -6,6 +6,7 @@ const path = require("path");
 const csv = require("fast-csv");
 const { writeToPath } = require("fast-csv");
 module.exports = defineConfig({
+  projectId: "zqpatq",
   reporter: "cypress-mochawesome-reporter",
 
   e2e: {
