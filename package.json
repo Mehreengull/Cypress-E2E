@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "your-server-start-command",
+    "start": "echo \"No server needed\"",
     "cy:run": "cypress run"
   },
-  "wait-on": "https://naveenautomationlabs.com/opencart/index.php?route=account",
   "author": "",
   "license": "ISC",
   "devDependencies": {
