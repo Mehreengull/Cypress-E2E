@@ -24,6 +24,7 @@ describe("Register users using neat csv", () => {
       //Concatenate all the emailParts with randomString in between
       let newEmail = emailParts[0] + random + "@" + emailParts[1];
       register.enterEmail(newEmail);
+      //expect(user.Email).to.not.deep.equal(newEmail);
       register.enterPhone(user.Phone);
       register.enterPassword(user.Password);
       register.enterConfirmPassword(user.confirmPassword);
