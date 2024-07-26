@@ -1,7 +1,7 @@
 import { RegisterPage } from "../pages/registerPage";
 const neatCSV = require("neat-csv");
-
 let table;
+let usersData = [];
 
 describe("Register users using neat csv", () => {
   before(() => {
@@ -19,19 +19,19 @@ describe("Register users using neat csv", () => {
       register.enterFirstName(user.FirstName);
       register.enterLastName(user.LastName);
       let random = Math.random().toString().substring(2, 6);
-      //Using split to spilt email when find @
+      // Using split to split email when finding @
       let emailParts = user.Email.split("@");
-      //Concatenate all the emailParts with randomString in between
+      // Concatenate all the emailParts with randomString in between
       let newEmail = emailParts[0] + random + "@" + emailParts[1];
       register.enterEmail(newEmail);
-      //expect(user.Email).to.not.deep.equal(newEmail);
       register.enterPhone(user.Phone);
       register.enterPassword(user.Password);
       register.enterConfirmPassword(user.confirmPassword);
       register.isSubscribed(user.subscribe);
       register.checkPolicy();
       register.clickContinue();
-      register.logOut();
+      register.verifyAccountCreation();
+      register.logOutUser();
     });
   });
 });

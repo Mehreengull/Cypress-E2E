@@ -52,11 +52,24 @@ export class RegisterPage {
       .should("be.visible")
       .and("contain", "Your Account Has Been Created!");
   }
-  logOut() {
+  getlogOut() {
     cy.get(".dropdown > .dropdown-toggle > .fa").click();
     cy.contains("Logout").click();
     cy.get("div[id='content'] h1")
       .should("be.visible")
       .and("contain", "Account Logout");
+  }
+  logOutUser() {
+    cy.get("body").then(($body) => {
+      if ($body.find(".alert").length === 0) {
+        this.getlogOut();
+      } else {
+        cy.get(".alert")
+          .invoke("text")
+          .then((alertText) => {
+            cy.log(alertText);
+          });
+      }
+    });
   }
 }

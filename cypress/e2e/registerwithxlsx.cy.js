@@ -6,7 +6,6 @@ describe("Registration flow with excel file", () => {
     cy.parseXlsx("cypress/fixtures/registerQA.xlsx").then((jsonData) => {
       //rowLength is the number of rows in sheet 1
       const rowLength = Cypress.$(jsonData[0].data).length;
-      cy.log(rowLength);
       //a loop to iterate over each row in sheet excluding header row
       for (let i = 1; i < rowLength; i++) {
         let value = jsonData[0].data[i];
@@ -28,7 +27,7 @@ describe("Registration flow with excel file", () => {
         register.checkPolicy();
         register.clickContinue();
         register.verifyAccountCreation();
-        register.logOut();
+        register.logOutUser();
       }
     });
   });

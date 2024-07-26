@@ -42,24 +42,6 @@ module.exports = defineConfig({
           });
         },
       });
-      on("task", {
-        writeToCSV({ filePath, name, rows }) {
-          writeToPath(`${filePath}/${name}`, rows, { headers: true });
-          return null;
-        },
-      });
-      on("task", {
-        writeToExcel({ data, filePath }) {
-          // Convert data to worksheet
-          const worksheet = writexlsx.utils.json_to_sheet(data);
-          // Create a new workbook
-          const workbook = writexlsx.utils.book_new();
-          writexlsx.utils.book_append_sheet(workbook, worksheet, "Users");
-          // Write workbook to file
-          writexlsx.writeFile(workbook, filePath);
-          return null;
-        },
-      });
     },
   },
 });

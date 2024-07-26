@@ -25,6 +25,7 @@
     "faker": "^6.6.6",
     "fast-csv": "^5.0.1",
     "fs": "^0.0.1-security",
+    "fs-extra": "^11.2.0",
     "papaparse": "^5.4.1",
     "xlsx": "^0.18.5"
   }

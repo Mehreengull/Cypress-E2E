@@ -23,7 +23,8 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-
+import { LoginPage } from "../pages/loginPage";
+const login = new LoginPage();
 Cypress.Commands.add("parseXlsx", (inputFile) => {
   return cy.task("parseXlsx", { filePath: inputFile });
 });
@@ -32,10 +33,8 @@ Cypress.Commands.add("readFromCSV", (inputFile) => {
   return cy.task("readFromCSV", { filePath: inputFile });
 });
 
-Cypress.Commands.add("writeToCSV", (inputFile, name, rows) => {
-  return cy.task("writeToCSV", { filePath: inputFile, name: name, rows: rows });
-});
-
-Cypress.Commands.add("writeToExcel", (data, filePath) => {
-  return cy.task("writeToExcel", { data, filePath });
+Cypress.Commands.add("Login", (email, password) => {
+  login.enterEmail(email);
+  login.enterPassword(password);
+  return login.clickLoginCTA();
 });
