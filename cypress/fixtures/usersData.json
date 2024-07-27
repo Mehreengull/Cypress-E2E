@@ -1,4 +1,9 @@
 {
-  "email": "john3135@hotmail.com",
-  "password": "987654321"
+  "login": {
+    "email": "john3135@hotmail.com",
+    "password": "987654321"
+  },
+  "product": {
+    "productName": "MacBook"
+  }
 }

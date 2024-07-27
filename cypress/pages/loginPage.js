@@ -1,5 +1,3 @@
-import { th } from "@faker-js/faker";
-
 export class LoginPage {
   webLocators = {
     email: "input[name='email']",
