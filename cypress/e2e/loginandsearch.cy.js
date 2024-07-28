@@ -11,6 +11,7 @@ describe("Login and search", () => {
     // code here
     cy.Login(testData.login.email, testData.login.password);
     product.searchBar(testData.product.productName);
+    product.addToCart();
     //get all 3 product in an array and loop until find macbookpro and add it to cart
   });
 });

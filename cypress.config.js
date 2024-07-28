@@ -8,7 +8,7 @@ const { writeToPath } = require("fast-csv");
 module.exports = defineConfig({
   projectId: "zqpatq",
   reporter: "cypress-mochawesome-reporter",
-
+  video: true,
   e2e: {
     baseUrl:
       "https://naveenautomationlabs.com/opencart/index.php?route=account",
