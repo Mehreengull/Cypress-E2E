@@ -20,11 +20,5 @@ jobs:
           wait-on: "https://naveenautomationlabs.com"
           record: true
           browser: firefox
-
-      - name: Cypress Test Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: Mochaawesome HTML Report
-          path: cypress/reports/html # or path/to/artifact
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
