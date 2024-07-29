@@ -8,6 +8,7 @@ const { writeToPath } = require("fast-csv");
 module.exports = defineConfig({
   projectId: "zqpatq",
   reporter: "cypress-mochawesome-reporter",
+  screenshotOnRunFailure: true,
   //video: true,
   e2e: {
     baseUrl:
