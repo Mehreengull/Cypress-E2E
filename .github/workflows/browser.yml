@@ -26,6 +26,5 @@ jobs:
         with:
           name: Mochaawesome HTML Report
           path: cypress/reports/html # or path/to/artifact
-
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
