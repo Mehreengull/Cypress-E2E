@@ -22,3 +22,9 @@ jobs:
           browser: firefox
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
+      - name: Cypress Test Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: Mochaawesome HTML Report
+          path: cypress/reports/html
